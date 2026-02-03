@@ -11,7 +11,7 @@ public class ExampleUnitTest {
     // --- Pruebas para convertirNumero (entrada a decimal) ---
     @Test
     public void testConvertirBinarioADecimal() {
-        assertEquals(10, Calculadora.convertirNumero("1010", 0));
+        assertEquals(10, Calculadora.convertirNumero(1010, a));
     }
 
     @Test
