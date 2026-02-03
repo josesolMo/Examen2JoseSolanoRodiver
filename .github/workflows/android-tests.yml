@@ -56,8 +56,7 @@ jobs:
       run: chmod +x gradlew
 
     - name: Run ExampleUnitTest
-      run: ./gradlew test --tests "com.example.examen2.ExampleUnitTest" --stacktrace
-
+      run: ./gradlew test -Dorg.gradle.warning.mode=none
     - name: Upload test results
       if: always()
       uses: actions/upload-artifact@v4
