@@ -1,4 +1,5 @@
 package com.example.examen2;
+
 public class Calculadora {
 
     // Método para convertir el número a la base seleccionada (0: Binario, 1: Octal, 2: Decimal, 3: Hexadecimal)
@@ -67,5 +68,15 @@ public class Calculadora {
             default:
                 throw new IllegalArgumentException("Base de destino no soportada");
         }
+    }
+
+    // Método para encontrar si un elemento está en una lista de enteros (True o False)
+    public static boolean Encuentra(int[] lista, int elemento) {
+        for (int n : lista) {
+            if (n == elemento) {
+                return true;
+            }
+        }
+        return false;
     }
 }
