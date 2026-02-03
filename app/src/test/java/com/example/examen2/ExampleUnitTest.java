@@ -17,6 +17,13 @@ public class ExampleUnitTest {
     @Test
     public void testConvertirOctalADecimal() {
         assertEquals(8, Calculadora.convertirNumero("10", 1));
+    public void testConvertirBinarioADecimal() {
+        assertEquals(10, Calculadora.convertirNumero("1010", 0));
+    }
+
+    @Test
+    public void testConvertirHexaADecimal() {
+        assertEquals(255, Calculadora.convertirNumero("FF", 3));
     }
 
     // --- Pruebas para realizarOperacion ---
@@ -39,5 +46,24 @@ public class ExampleUnitTest {
     @Test
     public void testDecimalADecimal() {
         assertEquals("100", Calculadora.convertirADestino(100, 2));
+    public void testSuma() {
+        assertEquals(15, Calculadora.realizarOperacion(10, 5, "+"));
     }
+
+    @Test
+    public void testResta() {
+        assertEquals(5, Calculadora.realizarOperacion(10, 5, "-"));
+    }
+
+    // --- Pruebas para convertirADestino (decimal a salida) ---
+    @Test
+    public void testDecimalABinario() {
+        assertEquals("1010", Calculadora.convertirADestino(10, 0));
+    }
+
+    @Test
+    public void testDecimalAHexa() {
+        assertEquals("ff", Calculadora.convertirADestino(255, 3).toLowerCase());
+    }
+
 }
