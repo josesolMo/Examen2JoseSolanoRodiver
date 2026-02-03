@@ -95,4 +95,10 @@ public class ExampleUnitTest {
         int[] lista = {7, 8, 9};
         assertTrue(Calculadora.Encuentra(lista, 7));
     }
+
+    @Test
+    public void testEncuentraUltimoElemento() {
+        int[] lista = {10, 20, 30};
+        assertTrue(Calculadora.Encuentra(lista, 30));
+    }
 }
